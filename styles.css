@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#raceTrack {
+  width: 1000px;
+  height: 200px;
+  border: 2px solid black;
+  position: relative;
+  margin: 20px auto;
+  background: #f0f0f0;
+}
+
+.horse {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 30px;
+  background: #8b4513;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  transition: left 0.1s linear;
+}
+
+#horse1 { top: 20px; }
+#horse2 { top: 60px; }
+#horse3 { top: 100px; }
+#horse4 { top: 140px; }
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+}
