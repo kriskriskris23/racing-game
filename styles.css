@@ -10,6 +10,7 @@ body {
   position: relative;
   margin: 20px auto;
   background: #f0f0f0;
+  overflow: hidden;
 }
 
 .horse {
@@ -21,7 +22,8 @@ body {
   color: white;
   text-align: center;
   line-height: 30px;
-  transition: left 0.1s linear;
+  border-radius: 5px;
+  transition: left 0.2s ease-in-out; /* Smooth movement */
 }
 
 #horse1 { top: 20px; }
@@ -29,7 +31,32 @@ body {
 #horse3 { top: 100px; }
 #horse4 { top: 140px; }
 
+#finishLine {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    red,
+    red 10px,
+    white 10px,
+    white 20px
+  );
+}
+
 #result {
   margin-top: 20px;
   font-size: 20px;
+}
+
+/* Optional: Add a subtle bounce effect when moving */
+.horse.moving {
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
